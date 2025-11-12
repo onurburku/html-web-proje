@@ -1,0 +1,37 @@
+# [Web Arayüz Tasarım] - Kişisel Blog Sitesi Projesi
+
+Bu proje, [Dersinizin Adı] dersi final ödevi/projesi olarak hazırlanmış kişisel bir blog web sitesidir.
+
+---
+
+## 🧑‍🎓 Öğrenci Bilgileri
+
+* İsim Soyisim: Onur BURKU
+* Öğrenci Numarası:  
+* Ders: Web Arayüz Tasarım 
+
+
+---
+
+## 🚀 Proje Hakkında
+
+Bu proje, bir kişisel blog sitesinin HTML ve CSS kullanılarak oluşturulmuş halidir. Site içerisinde aşağıdaki sayfalar bulunmaktadır:
+
+* **Ana Sayfa:** 
+* **Hakkımda:** (Kişisel bilgiler)
+* **Blog:** (Tüm blog yazılarının listesi)
+* **İletişim:** (iletişim bilgileri)
+
+
+Proje için ilham kaynağı olarak [templatemonster.com](https://www.templatemonster.com) sitesindeki tasarımlardan faydalanılmıştır.
+
+---
+
+## 🛠️ Kullanılan Teknolojiler
+
+Ödev gereksinimlerine uygun olarak, proje **HTML5** ve **CSS3** teknolojileri kullanılarak sıfırdan kodlanmıştır.
+
+* **HTML5:** Sitenin iskelet yapısı ve içeriği için kullanıldı.
+* **CSS3:** Sitenin görsel tasarımı, renkleri, yazı tipleri ve duyarlı (responsive) yerleşimi için kullanıldı.
+
+---

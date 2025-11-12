@@ -1,0 +1,338 @@
+/* --- TEMEL AYARLAR VE SIFIRLAMA --- */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Renk Paleti Tanımlamaları */
+    --primary-color: #4A90E2; 
+    --secondary-color: #50E3C2; 
+    --dark-text: #333333;
+    --light-text: #666666;
+    --background-light: #F8F9FA; /* Hafif Gri Arka Plan */
+    --background-card: #FFFFFF; /* Kartlar için Beyaz */
+    --border-color: #E0E0E0;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.12);
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Daha modern bir font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.7; /* Okunabilirliği artırır */
+    background-color: var(--background-light);
+    color: var(--dark-text);
+    text-rendering: optimizeLegibility; /* Yazı fontlarını daha net gösterir */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Daha geniş bir maksimum genişlik */
+    margin: 0 auto;
+    padding: 0 1rem; /* Yanlardan boşluk (0px'den düzeltildi) */
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: #357ABD; 
+    transform: translateY(-1px); /* Hafif yukarı kaydırma efekti */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Daha belirgin yuvarlatılmış köşeler */
+    display: block; /* Gereksiz boşlukları kaldırır */
+}
+
+/* --- HEADER (SAYFA BAŞLIĞI) --- */
+header {
+   background-color:#2C3E50;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px var(--shadow-light); /* Daha belirgin ama yumuşak gölge */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem; /* Başlık boyutu büyütüldü */
+    font-weight: 800; /* Daha kalın */
+}
+
+header h1 a {
+    color: #ECF0F1; /* Koyu arka plan için açık renge (beyaza yakın) değiştirildi */
+    transition: color 0.3s ease;
+}
+
+header h1 a:hover {
+    color: var(--primary-color); /* Hover rengi hala mavi kalabilir, güzel görünür */
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav li {
+    display: inline-block;
+    margin-left: 25px; /* Boşluk artırıldı */
+}
+
+header nav a {
+    font-weight: 600;
+    color:#E0E0E0; /* Bu değişiklik doğruydu (açık renk) */
+    padding: 0.5rem 0; /* Tıklama alanı büyütüldü */
+    position: relative;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color:#666666; /* Bu değişiklik de tamam */
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+/* --- ANA İÇERİK DÜZENİ (FLEXBOX) --- */
+.site-wrapper {
+    padding: 3rem 0; /* Üst ve alttan boşluk artırıldı */
+}
+
+.site-wrapper .container {
+    display: flex;
+    gap: 3rem; /* Boşluk artırıldı */
+    align-items: flex-start; /* Üstten hizala */
+}
+
+main {
+    flex: 3;
+    min-width: 0; /* Flex item içindeki içeriğin taşmasını engeller */
+}
+
+aside {
+    flex: 1;
+    min-width: 0; /* Flex item içindeki içeriğin taşmasını engeller */
+}
+
+/* --- BLOG YAZILARI --- */
+.blog-post {
+    background-color: var(--background-card);
+    padding: 2.5rem; /* İç boşluk artırıldı */
+    margin-bottom: 2.5rem;
+    border-radius: 12px; /* Daha belirgin yuvarlatılmış köşeler */
+    box-shadow: 0 8px 25px var(--shadow-medium); /* Daha derin ama yumuşak gölge */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover efekti için geçiş */
+}
+
+.blog-post:hover {
+    transform: translateY(-7px); /* Yazıyı hafifçe yukarı kaldır */
+    box-shadow: 0 15px 40px var(--shadow-medium); /* Gölgeyi derinleştir */
+}
+
+.blog-post h2 {
+    margin-top: 0;
+    font-size: 1.9rem; /* Başlık boyutu */
+    line-height: 1.3;
+}
+
+.blog-post h2 a {
+    color: var(--dark-text);
+}
+
+.blog-post .post-meta {
+    font-size: 0.95rem;
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex; /* Yazar ve tarih yan yana */
+    gap: 10px;
+    align-items: center;
+}
+
+.blog-post .post-meta a {
+    font-weight: 600;
+    color: var(--light-text);
+}
+
+.blog-post .post-meta a:hover {
+    color: var(--primary-color);
+}
+
+
+.blog-post img {
+    margin-bottom: 1.5rem;
+    filter: brightness(0.95); /* Resimlere hafif bir parlaklık efekti */
+    transition: filter 0.3s ease;
+}
+
+.blog-post:hover img {
+    filter: brightness(1); /* Hover'da normal parlaklığa döner */
+}
+
+
+.read-more {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 0.8rem 1.6rem; /* Daha büyük buton */
+    border-radius: 7px;
+    font-weight: 700;
+    letter-spacing: 0.5px; /* Harf aralığı */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3); /* Butona özel gölge */
+}
+
+.read-more:hover {
+    background-color: #357ABD;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(74, 144, 226, 0.4);
+}
+
+/* --- SIDEBAR (YAN PANEL) --- */
+.widget {
+    background-color: var(--background-card);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.widget h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: var(--dark-text);
+    border-bottom: 3px solid var(--secondary-color); /* Vurgulu bir alt çizgi */
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
+    display: inline-block; /* Çizgiyi başlık genişliğinde tutar */
+}
+
+.widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget li {
+    margin-bottom: 0.7rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.widget li::before {
+    content: '→'; /* Ok işareti */
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.widget li a {
+    color: var(--light-text);
+    transition: color 0.3s ease;
+}
+
+.widget li a:hover {
+    color: var(--primary-color);
+}
+
+.widget .profile-pic {
+    border-radius: 50%;
+    display: block;
+    margin: 1.5rem auto;
+    width: 120px; /* Biraz büyütüldü */
+    height: 120px;
+    object-fit: cover; /* Resmin orantısını korur */
+    border: 3px solid var(--primary-color); /* Çerçeve eklendi */
+    box-shadow: 0 0 0 5px rgba(74, 144, 226, 0.2); /* Hafif dış gölge */
+}
+
+/* --- FOOTER (SAYFA ALTI) --- */
+footer {
+    background-color: #2C3E50; /* Koyu gri/mavi */
+    color: #ECF0F1; /* Açık gri */
+    text-align: center;
+    padding: 2.5rem 0; /* Daha fazla boşluk */
+    margin-top: 3rem;
+    font-size: 0.95rem;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1); /* Üstten gölge */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* --- RESPONSIVE TASARIM (CSS3 Media Queries) --- */
+@media (max-width: 992px) {
+    .site-wrapper .container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    main, aside {
+        flex: auto; /* Kendi genişliklerini alırlar */
+    }
+
+    aside {
+        order: -1; /* Yan paneli ana içeriğin üstüne taşır */
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    header nav ul {
+        display: flex; /* Menüyü ortala */
+        justify-content: center;
+        flex-wrap: wrap; /* Gerekirse alt satıra geç */
+    }
+
+    header nav li {
+        margin: 0 10px 10px; /* Küçük ekranlarda menü elemanları arası boşluk */
+    }
+
+    .blog-post, .widget {
+        padding: 1.5rem; /* Küçük ekranlarda iç boşlukları azalt */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .blog-post h2 {
+        font-size: 1.5rem;
+    }
+
+    .read-more {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}

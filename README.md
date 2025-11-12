@@ -2,12 +2,6 @@
 
 Bu proje, HTML5 ve CSS3'ün modern özelliklerini kullanarak oluşturulmuş, temiz, estetik ve tam duyarlı (responsive) bir blog sayfası şablonudur. Eğitim amaçlı oluşturulmuştur ve modern web geliştirme tekniklerini sergilemektedir.
 
-## 🖥️ Ön İzleme
-
-(Buraya projenizin bir ekran görüntüsünü ekleyebilirsiniz. Örneğin, `onizleme.png` adında bir ekran görüntüsü alıp klasöre eklerseniz, aşağıdaki satır o resmi gösterecektir.)
-
-![Proje Ön İzlemesi](httpsLED_Ekran_Görüntüsü)
-
 ## ✨ Öne Çıkan Özellikler
 
 Bu şablon, basit bir blog yapısını göstermek için aşağıdaki modern web teknolojilerini ve yaklaşımlarını içerir:

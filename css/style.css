@@ -1,10 +1,10 @@
-/* --- TEMEL AYARLAR VE SIFIRLAMA --- */
+
 * {
     box-sizing: border-box;
 }
 
 :root {
-    /* Renk Paleti Tanımlamaları */
+  
     --primary-color: #4A90E2; 
     --secondary-color: #50E3C2; 
     --dark-text: #333333;

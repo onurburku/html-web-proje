@@ -3,39 +3,26 @@
     box-sizing: border-box;
 }
 
-:root {
-  
-    --primary-color: #4A90E2; 
-    --secondary-color: #50E3C2; 
-    --dark-text: #333333;
-    --light-text: #666666;
-    --background-light: #F8F9FA;
-    --background-card: #FFFFFF; /* Kartlar için Beyaz */
-    --border-color: #E0E0E0;
-    --shadow-light: rgba(0, 0, 0, 0.08);
-    --shadow-medium: rgba(0, 0, 0, 0.12);
-}
-
 body {
-    font-family: 'Inter', sans-serif; /* Daha modern bir font */
-    margin: 0;
-    padding: 0;
-    line-height: 1.7; /* Okunabilirliği artırır */
+    font-family: 'Inter', sans-serif; 
+    margin: 0; /* dış boşluk */
+    padding: 0; /* iç boşluk */
+    line-height: 1.7; /* satır yüksekliği */
     background-color: var(--background-light);
-    color: var(--dark-text);
-    text-rendering: optimizeLegibility; /* Yazı fontlarını daha net gösterir */
+    color: #333333;
+    text-rendering: optimizeLegibility; /* yazı fontlarını daha net gösterir */
 }
 
 .container {
     width: 90%;
-    max-width: 1200px; /* Daha geniş bir maksimum genişlik */
+    max-width: 1200px; /* maksimum genişlik */
     margin: 0 auto;
     padding: 0 1rem; /* Yanlardan boşluk (0px'den düzeltildi) */
 }
 
 a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: #4A90E2;
 }
 
 a:hover {
@@ -54,8 +41,8 @@ img {
 header {
    background-color:#2C3E50;
     padding: 1.5rem 0;
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 4px 15px var(--shadow-light); /* Daha belirgin ama yumuşak gölge */
+    border-bottom: 1px solid #E0E0E0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);; /* Daha belirgin ama yumuşak gölge */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -80,7 +67,7 @@ header h1 a {
 }
 
 header h1 a:hover {
-    color: var(--primary-color); /* Hover rengi hala mavi kalabilir, güzel görünür */
+    color: #4A90E2; /* Hover rengi hala mavi kalabilir, güzel görünür */
 }
 
 header nav ul {
@@ -138,17 +125,17 @@ aside {
 
 /* --- BLOG YAZILARI --- */
 .blog-post {
-    background-color: var(--background-card);
+    background-color: #FFFFFF;;
     padding: 2.5rem; /* İç boşluk artırıldı */
     margin-bottom: 2.5rem;
     border-radius: 12px; /* Daha belirgin yuvarlatılmış köşeler */
-    box-shadow: 0 8px 25px var(--shadow-medium); /* Daha derin ama yumuşak gölge */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);; /* Daha derin ama yumuşak gölge */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover efekti için geçiş */
 }
 
 .blog-post:hover {
     transform: translateY(-7px); /* Yazıyı hafifçe yukarı kaldır */
-    box-shadow: 0 15px 40px var(--shadow-medium); /* Gölgeyi derinleştir */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);; /* Gölgeyi derinleştir */
 }
 
 .blog-post h2 {
@@ -158,15 +145,15 @@ aside {
 }
 
 .blog-post h2 a {
-    color: var(--dark-text);
+    color: #333333;
 }
 
 .blog-post .post-meta {
     font-size: 0.95rem;
-    color: var(--light-text);
+    color: #666666;
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid #E0E0E0;
     display: flex; /* Yazar ve tarih yan yana */
     gap: 10px;
     align-items: center;
@@ -174,11 +161,11 @@ aside {
 
 .blog-post .post-meta a {
     font-weight: 600;
-    color: var(--light-text);
+    color: #666666;
 }
 
 .blog-post .post-meta a:hover {
-    color: var(--primary-color);
+    color: #4A90E2;
 }
 
 
@@ -195,7 +182,7 @@ aside {
 
 .read-more {
     display: inline-block;
-    background-color: var(--primary-color);
+    background-color: #4A90E2;
     color: #ffffff;
     padding: 0.8rem 1.6rem; /* Daha büyük buton */
     border-radius: 7px;
@@ -213,18 +200,18 @@ aside {
 
 /* --- SIDEBAR (YAN PANEL) --- */
 .widget {
-    background-color: var(--background-card);
+    background-color: #FFFFFF;;
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 12px;
-    box-shadow: 0 8px 25px var(--shadow-medium);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);;
 }
 
 .widget h3 {
     margin-top: 0;
     font-size: 1.5rem;
-    color: var(--dark-text);
-    border-bottom: 3px solid var(--secondary-color); /* Vurgulu bir alt çizgi */
+    color: #333333;
+    border-bottom: 3px solid #50E3C2; /* Vurgulu bir alt çizgi */
     padding-bottom: 0.8rem;
     margin-bottom: 1.5rem;
     display: inline-block; /* Çizgiyi başlık genişliğinde tutar */
@@ -246,17 +233,17 @@ aside {
     content: '→'; /* Ok işareti */
     position: absolute;
     left: 0;
-    color: var(--primary-color);
+    color: #4A90E2;
     font-weight: bold;
 }
 
 .widget li a {
-    color: var(--light-text);
+    color: #666666;
     transition: color 0.3s ease;
 }
 
 .widget li a:hover {
-    color: var(--primary-color);
+    color: #4A90E2;
 }
 
 .widget .profile-pic {
@@ -266,7 +253,7 @@ aside {
     width: 120px; /* Biraz büyütüldü */
     height: 120px;
     object-fit: cover; /* Resmin orantısını korur */
-    border: 3px solid var(--primary-color); /* Çerçeve eklendi */
+    border: 3px solid #4A90E2; /* Çerçeve eklendi */
     box-shadow: 0 0 0 5px rgba(74, 144, 226, 0.2); /* Hafif dış gölge */
 }
 
